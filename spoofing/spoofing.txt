@@ -1,1 +1,10 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+By gaining access to the token, u can pose as the authorized user- spoofing
+
+Cookies cant be read programmatically if the flag http only is set to true, httpOnly - true
+Also add restriction that hostname etc should be of same everything so 2 people cant be posed as 1- no cross origin, SAME SITE- true
+
+CIA
+Authorization violated
+As they can gain access- to sensitive info.

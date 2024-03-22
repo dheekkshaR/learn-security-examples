@@ -1,0 +1,8 @@
+Sanitising every external input 
+User can input in html/js code
+
+Using:
+escapeHTML: &, <, >, ', " etc removed
+
+CIA violated:
+Integrity - as the information is manipulated.
