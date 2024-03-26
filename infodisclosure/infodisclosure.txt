@@ -1,3 +1,16 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+Info disclosure :
+Insecure lets even regex strings pass, which just displays the user details of the 1st user in the data base where username!= empty.
+You can access user details without any authentication. 
+Secure.js makes use of only words/input of a certain type is allowed. username.replace(/[^\w\s]/gi, ''); 
+Sanitization of input is included which prevents regex or code additions which can execute and reveal info.
+
+CIA: Confidentiality violated 
+
+We can also: 
+Remove unnecesary console.logs 
+Use hashing while storing data in DB. Use encryption. 
+Dont send password back as well only what is necessary for usage send to the app.

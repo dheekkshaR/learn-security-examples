@@ -1,0 +1,9 @@
+There was no authentication so anyone could do privilege escalation.
+
+Secure.js
+Use strong authentication. - Secure.js. Session authentication.
+
+Additionally:Can use 2FA for authentication . 
+
+CIA: authentication not present, so priv escalation. This can lead to Confidentiality and integrity broken as well.
+

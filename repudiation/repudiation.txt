@@ -1,2 +1,17 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Ability to track down where the request (bad)n came from. 
+Cant do if there is insufficiently logging of info of where why when.
+Or if the logs were tampered with so we couldnt change anything.
+
+Insecure.js: allows users to deny their actions. 
+
+Each route has logged incoming reqs, from where, the request.
+New middleware func created with timestamp, method, url, ip.
+
+Secure logs each message sent :   const logEntry = `[${new Date().toISOString()}] Message sent by ${user}: ${message}`;
+Get messages, send etc is also authenticated, tracks received by this ip.
+The root admin only can see this log file, private not all accesible.
+
+Can add more sanitization, 2FA etc  
