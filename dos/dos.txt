@@ -1,2 +1,13 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Denial of servcie is when the service is overwhelmed which prevents people/legitimate users from using it.
+CIA- Availability is affected.
+
+Used try catch, sends 400 if there is any error, when you send regex or empty or naything the service is actually crashing instead of injection.
+SO here we can repeatedly crash the server becasue of this, using insecure server.
+Adding try catch handles error so server will not crash it will just show error instead, keeping server available.
+
+Sanitation of entered id/data can be done additionally for security.
+Add checks, use middleware, restrict num of requests (rate limiting) from a source etc. for a certain period of time.
+Add captcha if really requests are being made in a larger load than expected, services like cloudflare.
